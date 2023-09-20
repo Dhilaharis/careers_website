@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <title>Careers</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    #im{
+      width: 100%;
+      height: 300px;
+      object-fit:cover;
+    }
+  </style>
+</html>
+<body>
+  <div class="container">
+  <h1 class="text-center">Careers Website</h1>
+  <img id="im" class="img" src="https://tempcode--dhilaharist.repl.co/static/image2.jpg">
+    <div class="mt-4">
+    <h2 class="text-center">Open Positions</h2>
+    </div>
+    <div>
+      {% for job in jobs %}
+      
+       {% include 'jobit.html' %}
+      {% endfor %}
+     
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary">Contact us</button>
+    </div>
+  </div>
+</body>
+</html>
+
