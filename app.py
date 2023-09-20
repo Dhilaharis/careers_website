@@ -5,11 +5,11 @@ app=Flask(__name__)
 Jobs=[{
   'role':'Data science',
   'exp':'2yrs',
-  'location':'chennai'
+  'location':'Chennai'
 },{
   'role':'Data analyst',
   'exp':'1yrs',
-  'location':'coimbatore'
+  'location':'Coimbatore'
 }]
 
 @app.route('/')
