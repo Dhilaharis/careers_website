@@ -1,6 +1,13 @@
 from flask import Flask ,render_template,jsonify
-
+# from flask_mysqldb import MySQL
 app=Flask(__name__)
+
+# app.config["MYSQL_HOST"]="localhost"
+# app.config["MYSQL_USER"]="root"
+# app.config["MYSQL_PASSWORD"]="mysql11"
+# app.config["MYSQL_DB"]="career"
+# app.config["MYSQL_CURSORCLASS"]="Dictcursor"
+# mysql=MySQL(app)
 
 Jobs=[{
   'role':'Data science',
@@ -14,6 +21,10 @@ Jobs=[{
 
 @app.route('/')
 def index():
+  # con=mysql.connection.cursor()
+  # sql="INSERT into employees(title) value ('Data')"
+  # con.execute(sql)
+  # mysql.connection.commit()
   return render_template("home.html",jobs=Jobs)
 
 @app.route('/api/jobs')
