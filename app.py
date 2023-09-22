@@ -1,7 +1,11 @@
 from flask import Flask ,render_template,jsonify
+from flask_sqlalchemy import SQLAlchemy
 # from flask_mysqldb import MySQL
-app=Flask(__name__)
 
+
+app=Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:ok@localhost/alchamy'
+db = SQLAlchemy(app)
 # app.config["MYSQL_HOST"]="localhost"
 # app.config["MYSQL_USER"]="root"
 # app.config["MYSQL_PASSWORD"]="mysql11"
